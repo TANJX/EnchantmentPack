@@ -158,6 +158,7 @@ public class Trap {
         enchantment.onUpdate(this, level);
         if (owner == null) remove();
         else if (!owner.isOnline()) remove();
+		else if (!owner.getWorld ==location.getWorld()) remove();
         else if (owner.getLocation().distanceSquared(center) > MAX_DISTANCE * MAX_DISTANCE) remove();
         lifespan--;
         if (lifespan == 0) remove();
